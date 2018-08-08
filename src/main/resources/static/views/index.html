@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script src="js/angular.js"></script>
+  <script src="js/app.module.js"></script>
+  <script src="js/employee.service.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <div ng-controller="myController as ctrl">
+
+    <input ng-model="ctrl.empName" type="text">
+    <button ng-click="ctrl.addEmployee()"> Add </button>
+
+    <ul ng-repeat="employee in ctrl.employees">
+      <li>
+        <span ng-if="!ctrl.isEditing[$index]">{{employee.name}}</span>
+        <input ng-model="ctrl.updatedName" ng-if="ctrl.isEditing[$index]" value="{{employee.name}}">
+        <button ng-click="ctrl.updateStatus($index)" ng-if="!ctrl.isEditing[$index]">Edit</button>
+        <button ng-click="ctrl.deleteEmployee($index)"> Delete </button>
+        <button ng-click="ctrl.updateEmployee($index)" ng-if="ctrl.isEditing[$index]"> Update </button>
+      </li>
+    </ul>
+
+  </div>
+
+
+</body>
+
+</html>
