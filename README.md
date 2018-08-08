@@ -12,3 +12,4 @@ How to build the project:
 7.  Enter a name and hit add button.
 8.  You will have the name added to the list. You will see edit and delete beside each name on the list.
 9.  Hit edit to change the name and delete to delete it from the list.
+10. Based on the _Jenkinsfile_ a pipeline job for this repo will be created in Jenkins.
