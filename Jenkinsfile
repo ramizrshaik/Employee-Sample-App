@@ -5,7 +5,7 @@
 
 def config = [
     agentLabel: 'docker-local',
-    emailRecipients: 'rameezshaik@hotmail.com',
+    emailRecipients: '<maintainerEmail or DL>@xyz.com',
     dockerRegistryCredentials: 'credentials for DTR'
 ]
 
